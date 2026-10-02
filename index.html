@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nocturne — a scroll through the night</title>
+  <meta name="description" content="A scroll-driven journey from dusk, through the deep of a dream, to dawn.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;1,9..144,300&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <canvas id="sky" aria-hidden="true"></canvas>
+  <div class="progress" aria-hidden="true"><span></span></div>
+
+  <header class="nav">
+    <a class="brand" href="#top">Nocturne</a>
+    <span class="clock" aria-live="off"><span id="clock">19:00</span></span>
+  </header>
+
+  <main>
+    <!-- 1. Dusk -->
+    <section class="hero" id="top">
+      <div class="moon" aria-hidden="true"></div>
+      <p class="eyebrow reveal">Chapter 0 — Dusk</p>
+      <h1 class="hero-title">
+        <span class="line"><span>Close your eyes.</span></span>
+        <span class="line"><span><em>Keep scrolling.</em></span></span>
+      </h1>
+      <p class="hero-sub reveal">A single night, from the last light to the first.</p>
+      <div class="scroll-hint" aria-hidden="true"><span></span></div>
+    </section>
+
+    <!-- 2. Pinned moon phases -->
+    <section class="phases" id="phases">
+      <div class="phases-sticky">
+        <div class="phase-moon" aria-hidden="true">
+          <div class="phase-shadow"></div>
+        </div>
+        <ol class="phase-list">
+          <li data-i="0"><span>21:00</span>Twilight settles</li>
+          <li data-i="1"><span>23:00</span>The city exhales</li>
+          <li data-i="2"><span>01:00</span>Thoughts loosen</li>
+          <li data-i="3"><span>03:00</span>The deep begins</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 3. Word reveal -->
+    <section class="statement">
+      <p class="words" data-words>
+        Somewhere between waking and sleep there is a quiet room where the ordinary rules come undone,
+        where stairs lead to the sea and old friends speak in colours. Stay a while.
+      </p>
+    </section>
+
+    <!-- 4. Horizontal dream chapters -->
+    <section class="drift" id="drift">
+      <div class="drift-sticky">
+        <p class="eyebrow drift-label">Chapter 1 — Drift</p>
+        <div class="drift-track">
+          <article class="card" style="--h: 250">
+            <div class="card-art"><i></i><i></i><i></i></div>
+            <h3>Falling, softly</h3>
+            <p>The bed tilts into clouds and gravity forgets its job.</p>
+          </article>
+          <article class="card" style="--h: 200">
+            <div class="card-art"><i></i><i></i><i></i></div>
+            <h3>The flooded library</h3>
+            <p>Every book floats open to the page you were looking for.</p>
+          </article>
+          <article class="card" style="--h: 290">
+            <div class="card-art"><i></i><i></i><i></i></div>
+            <h3>A door in the sky</h3>
+            <p>It was always there. You just never looked up at 3 a.m.</p>
+          </article>
+          <article class="card" style="--h: 320">
+            <div class="card-art"><i></i><i></i><i></i></div>
+            <h3>Familiar strangers</h3>
+            <p>Faces you've never met, voices you've always known.</p>
+          </article>
+          <article class="card" style="--h: 180">
+            <div class="card-art"><i></i><i></i><i></i></div>
+            <h3>The slow train</h3>
+            <p>No stations, no timetable, only the sound of the rails.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Parallax descent -->
+    <section class="deep" id="deep">
+      <div class="deep-sticky">
+        <div class="layer l1" data-depth="0.15"></div>
+        <div class="layer l2" data-depth="0.35"></div>
+        <div class="layer l3" data-depth="0.6"></div>
+        <div class="deep-copy">
+          <p class="eyebrow">Chapter 2 — The Deep</p>
+          <h2>Go further down<br><em>than you meant to.</em></h2>
+        </div>
+        <div class="layer l4" data-depth="0.9"></div>
+      </div>
+    </section>
+
+    <!-- 6. Stats -->
+    <section class="numbers">
+      <div class="stat reveal"><b data-count="90">0</b><span>minutes per sleep cycle</span></div>
+      <div class="stat reveal"><b data-count="5">0</b><span>cycles in a good night</span></div>
+      <div class="stat reveal"><b data-count="2">0</b><span>hours spent dreaming</span></div>
+    </section>
+
+    <!-- 7. Dawn -->
+    <section class="dawn" id="dawn">
+      <div class="sun" aria-hidden="true"></div>
+      <p class="eyebrow reveal">Chapter 3 — Dawn</p>
+      <h2 class="reveal">Good morning.</h2>
+      <p class="reveal">You remember almost none of it. That's how you know it was real.</p>
+      <a class="again" href="#top">Sleep again ↑</a>
+    </section>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>
